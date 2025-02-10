@@ -105,7 +105,7 @@ const displayMeals = (mealType) => {
     Philippines: [
       {
         name: "Tokwa't Baboy",
-        image: "./resources/philippines/tokwatb.png",
+        image: "/GERPHIS-Assignment2/resources/philippines/tokwatb.png",
         description: "Crispy tofu and tender pork with a tangy soy-vinegar sauce.",
         source: "dish.html?id=1",
       },
