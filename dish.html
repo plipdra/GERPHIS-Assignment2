@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dish Details | Spice of the Isles</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/93715cd56f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 md:px-9">
+        <div class="navbar-start">
+          <a href="index.html">
+            <img class="h-16" src="./resources/logo/logo.png" alt="Logo" />
+        </a>
+          <a href="index.html" class="text-2xl md:text-3xl text-slate-100 font-bold pl-7 font-serif">Spice of the Isles</a>
+        </div>
+      </div>
+    </header>
+    <main class="w-11/12 mx-auto my-10">
+      <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <!-- Back to Home Button -->
+        <div class="mt-6 text-center">
+            <a href="index.html" class="btn btn-primary bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+                ← Back to Home
+            </a>
+        </div>
+        <h1 id="dish-title" class="text-3xl font-bold text-gray-800 mb-4">Dish Name</h1>
+        <img id="dish-image" class="w-full rounded-lg mb-6" src="" alt="Dish Image" />
+        <p id="dish-description" class="text-gray-600 mb-4">Dish description goes here.</p>
+        <div id="ingred-container">
+            <h2 id="ingredient-title" class="text-2xl font-semibold text-gray-800 mb-3">Ingredients</h2>
+            <ul id="dish-ingredients" class="list-disc list-inside text-gray-600 mb-6">
+            <li>Ingredient 1</li>
+            <li>Ingredient 2</li>
+            <li>Ingredient 3</li>
+            </ul>
+        </div>
+        <div id="prep-container">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Preparation</h2>
+            <p id="dish-preparation" class="text-gray-600">Step-by-step instructions go here.</p>
+        </div>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-3 mt-3">Sensory Experience</h2>
+        <ul id="dish-sensory" class="list-disc list-inside text-gray-600 mb-6">
+          <li>sense 1</li>
+          <li>sense 2</li>
+          <li>sense 3</li>
+        </ul>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-3">Final Thoughts</h2>
+        <p id="dish-finale" class="text-gray-600">Final thoughts go here.</p>
+      </div>
+    </main>
+    <footer class="bg-gray-900 text-white py-6 text-center">
+      <p>&copy; 2025 Spice of the Isles. All rights reserved.</p>
+    </footer>
+    <script src="./js/dish.js"></script>
+  </body>
+</html>

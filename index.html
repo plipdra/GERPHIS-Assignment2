@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spice of the Isles</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/93715cd56f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar start -->
+      <div class="navbar bg-base-100 md:px-9">
+        <div class="navbar-start">
+          <a href="index.html">
+            <img class="h-16" src="./resources/logo/logo.png" alt="Logo" />
+        </a>
+          <a href="index.html" class="text-2xl md:text-3xl text-slate-100 font-bold pl-7 font-serif">Spice of the Isles</a>
+        </div>
+        <div class="navbar-center"></div>
+        <div class="navbar-end">
+          <!-- Menu for large screens -->
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-swhite">
+              <li>
+                <a onclick="fetchMealsByType('Philippines')">PHILIPPINES</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Singapore')">SINGAPORE</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Vietnam')">VIETNAM</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Thailand')">THAILAND</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Malaysia')">MALAYSIA</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Dropdown for mobile screens -->
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content text-swhite bg-base-100 rounded-box z-[1] mt-7 w-52 p-2 shadow right-0"
+            >
+              <li>
+                <a onclick="fetchMealsByType('Philippines')">PHILIPPINES</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Singapore')">SINGAPORE</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Vietnam')">VIETNAM</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Thailand')">THAILAND</a>
+              </li>
+              <li>
+                <a onclick="fetchMealsByType('Malaysia')">MALAYSIA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar end -->
+      <!-- Banner start -->
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(./resources/banner/banner1.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center py-20">
+              <div class="max-w-md">
+                <h1 class="mb-4 text-3xl font-bold uppercase">
+                  A taste of Southeast Asia in every Bite.
+                </h1>
+                <p class="mb-4">
+                  Bold flavors, rich traditions, unforgettable meals.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(./resources/banner/banner2.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div class="max-w-md">
+                <h1 class="mb-4 text-3xl font-bold uppercase">
+                  Savor the warmth of Southeast Asia in every bowl.
+                </h1>
+                <p class="mb-4">
+                  Comforting broths, aromatic spices, timeless recipes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(./resources/banner/banner3.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div class="max-w-md">
+                <h1 class="mb-4 text-3xl font-bold uppercase">
+                  A journey through Southeast Asia’s most beloved dishes.
+                </h1>
+                <p class="mb-4">
+                  Sweet, savory, and spiced to perfection.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <!-- Banner end-->
+    </header>
+    <main class="w-11/12 mx-auto">
+      <div id="author" class="divider uppercase text-xl font-serif text-red-text-gray-400"></div>
+      <div id="intro-container">
+
+      </div>
+      <div class="divider mt-7">
+        <span
+          id="foodType"
+          class="uppercase text-xl font-serif text-red-text-gray-400"
+          >Placeholder Type Text</span
+        >
+      </div>
+      <section
+        id="card-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 my-6 justify-evenly"
+      >
+        <!--Dynamic Food Cards loads here..-->
+      </section>
+    </main>
+    <footer>
+      <div
+        class="w-full relative bg-cover bg-center min-h-40"
+        style="background-image: url('./resources/footer/footerbg.jpg')"
+      >
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <!--3 columns grid-->
+        <div
+          class="grid sm:grid-cols-3 items-center justify-evenly relative z-10 h-full w-11/12 mx-auto"
+        >
+          <!--col-1-->
+          <div class="my-6">
+            <p class="text-sm text-justify pt-5 text-white font-serif">
+              This website was made by Group 2 of GERPHIS - Z29. Members are:
+            </p>
+            <ul>
+              <li>
+                <p class="text-sm text-justify pt-5 text-white font-serif">
+                  - Co, Sofia Bianca
+                </p>
+              </li>
+              <li>
+                <p class="text-sm text-justify pt-5 text-white font-serif">
+                  - Datario, Yasmin Audrey
+                </p>
+              </li>
+              <li>
+                <p class="text-sm text-justify pt-5 text-white font-serif">
+                  - Edralin, Philippe Nikos Keyan
+                </p>
+              </li>
+              <li>
+                <p class="text-sm text-justify pt-5 text-white font-serif">
+                  - Mendoza, Antonio Gabriel
+                </p>
+              </li>
+              <li>
+                <p class="text-sm text-justify pt-5 text-white font-serif">
+                  - Po, Aliexandra Heart
+                </p>
+              </li>
+            </ul>
+
+          </div>
+          <!--col-1 End-->
+          <!--Col 2 Start-->
+          <img
+            class="w-32 h-32 mx-auto"
+            src="./resources/logo/logo.png"
+            alt="Logo"
+          />
+          <!--Col 2 End-->
+          <!--Col 3 Start-->
+          <div class="text-white sm:mx-auto font-serif mt-4">
+            <h1 class="text-xl font-bold">CONTACT INFO</h1>
+            <address class="text-sm mt-3">
+              <p>Address: 121 Gerphis Ave., DLSU</p>
+              <p>Contact Number: +121</p>
+            </address>
+          </div>
+          <!--Col 3 End-->
+        </div>
+      </div>
+      <div class="w-full min-h-16 bg-slate-950 text-white text-center">
+        <p class="pt-5 text-sm font-mono">
+          &copy; 2025 Spice of the Isles. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./js/indexscript.js"></script>
+  </body>
+</html>
