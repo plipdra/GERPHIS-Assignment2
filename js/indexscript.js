@@ -111,13 +111,13 @@ const displayMeals = (mealType) => {
       },
       {
         name: "Pork Adobo",
-        image: "resources/philippines/adobo.png",
+        image: "../resources/philippines/adobo.png",
         description: "Braised pork in soy sauce, vinegar, garlic, and spices.",
         source: "dish.html?id=2",
       },
       {
         name: "Bibingka",
-        image: "resources/philippines/bibingka.png",
+        image: "../resources/philippines/bibingka.png",
         description: "Soft rice cake with coconut milk, cheese, and salted egg.",
         source: "dish.html?id=3",
       },
@@ -137,7 +137,7 @@ const displayMeals = (mealType) => {
       },
       {
         name: "Stir Fry Char Siew Noodles",
-        image: "resources/singapore/sfcsnoodles.png",
+        image: "../resources/singapore/sfcsnoodles.png",
         description: "Singaporean cuisine is all about noodles, rice, and seafood, along with all kinds of meat.",
         source: "dish.html?id=6",
       },
