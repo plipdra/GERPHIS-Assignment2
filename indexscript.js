@@ -105,19 +105,19 @@ const displayMeals = (mealType) => {
     Philippines: [
       {
         name: "Tokwa't Baboy",
-        image: "/GERPHIS-Assignment2/resources/philippines/tokwatb.png",
+        image: "resources/philippines/tokwatb.png",
         description: "Crispy tofu and tender pork with a tangy soy-vinegar sauce.",
         source: "dish.html?id=1",
       },
       {
         name: "Pork Adobo",
-        image: "../resources/philippines/adobo.png",
+        image: "resources/philippines/adobo.png",
         description: "Braised pork in soy sauce, vinegar, garlic, and spices.",
         source: "dish.html?id=2",
       },
       {
         name: "Bibingka",
-        image: "../resources/philippines/bibingka.png",
+        image: "resources/philippines/bibingka.png",
         description: "Soft rice cake with coconut milk, cheese, and salted egg.",
         source: "dish.html?id=3",
       },
@@ -125,19 +125,19 @@ const displayMeals = (mealType) => {
     Singapore: [
       {
         name: "Hainanese Chicken Rice",
-        image: "../resources/singapore/hainanese.png",
+        image: "resources/singapore/hainanese.png",
         description: "Hainanese chicken consists of rice cooked with chicken fat, served with steamed chicken, accompanied by chili sauce and cucumbers.",
         source: "dish.html?id=4",
       },
       {
         name: "Laksa",
-        image: "../resources/singapore/laksa.png",
+        image: "resources/singapore/laksa.png",
         description: "Nyonya Laksa is composed of rice noodles served in a coconut prawn broth.",
         source: "dish.html?id=5",
       },
       {
         name: "Stir Fry Char Siew Noodles",
-        image: "../resources/singapore/sfcsnoodles.png",
+        image: "resources/singapore/sfcsnoodles.png",
         description: "Singaporean cuisine is all about noodles, rice, and seafood, along with all kinds of meat.",
         source: "dish.html?id=6",
       },
@@ -145,19 +145,19 @@ const displayMeals = (mealType) => {
     Vietnam: [
       {
         name: "Pork and Shrimp Gỏi Cuốn",
-        image: "../resources/vietnam/pnsGuoiCuon.png",
+        image: "resources/vietnam/pnsGuoiCuon.png",
         description: "Short description of the dish...",
         source: "dish.html?id=7",
       },
       {
         name: "Phở Đồ Biển (Seafood Pho)",
-        image: "../resources/vietnam/PhoDoBien.png",
+        image: "resources/vietnam/PhoDoBien.png",
         description: "Short description of the dish...",
         source: "dish.html?id=8",
       },
       {
         name: "Chuối Chiên with Vanilla Ice Cream",
-        image: "../resources/vietnam/ChuoiChien.png",
+        image: "resources/vietnam/ChuoiChien.png",
         description: "Short description of the dish...",
         source: "dish.html?id=9",
       },
@@ -165,19 +165,19 @@ const displayMeals = (mealType) => {
     Thailand: [
       {
         name: "Som Tam",
-        image: "../resources/thailand/somtam.png",
+        image: "resources/thailand/somtam.png",
         description: "Also known as Papaya salad, although very simple is a very refreshing dish which brings a little heat.",
         source: "dish.html?id=10",
       },
       {
         name: "Kaeng Khiao Wan",
-        image: "../resources/thailand/kkwan.png",
+        image: "resources/thailand/kkwan.png",
         description: "A curry which makes use of fresh green chillies, basil and the peel of makrut limes, giving it its distinctive green colour.",
         source: "dish.html?id=11",
       },
       {
         name: "Khao Niao Mamuang",
-        image: "../resources/thailand/knmamuang.png",
+        image: "resources/thailand/knmamuang.png",
         description: "Mango sticky rice in english, glutinous rice cooked in coconut milk topped with toasted sesame seeds",
         source: "dish.html?id=12",
       },
@@ -185,13 +185,13 @@ const displayMeals = (mealType) => {
     Malaysia: [
       {
         name: "Roti Canai",
-        image: "../resources/malaysia/roticanai.png",
+        image: "resources/malaysia/roticanai.png",
         description: "Known as a flatbread dish in Malaysia, it is commonly accompanied by curry or condensed milk for dipping.",
         source: "dish.html?id=13",
       },
       {
         name: "Nasi Goreng",
-        image: "../resources/malaysia/nasigoreng.png",
+        image: "resources/malaysia/nasigoreng.png",
         description: "A type of fried rice dish wrapped in a thin layer of egg omelet.",
         source: "dish.html?id=14",
       },
