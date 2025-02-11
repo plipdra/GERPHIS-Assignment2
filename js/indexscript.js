@@ -169,19 +169,19 @@ const displayMeals = (mealType) => {
       {
         name: "Pork and Shrimp Gỏi Cuốn",
         image: "resources/vietnam/pnsGuoiCuon.png",
-        description: "Short description of the dish...",
+        description: "These fresh spring rolls combine succulent shrimp, tender pork, and crisp vegetables, all wrapped in rice paper served with a peanut dipping sauce.",
         source: "dish.html?id=7",
       },
       {
         name: "Phở Đồ Biển (Seafood Pho)",
         image: "resources/vietnam/PhoDoBien.png",
-        description: "Short description of the dish...",
+        description: "A fragrant bowl of seafood pho with a delicate broth infused with aromatic spices and shrimp, fish, and fresh herbs.",
         source: "dish.html?id=8",
       },
       {
         name: "Chuối Chiên with Vanilla Ice Cream",
         image: "resources/vietnam/ChuoiChien.png",
-        description: "Short description of the dish...",
+        description: "This crispy fried banana fritter offers a delightful contrast of textures and flavors, finished with a drizzle of chocolate syrup and crushed peanuts.",
         source: "dish.html?id=9",
       },
     ],
