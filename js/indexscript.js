@@ -1,28 +1,51 @@
 const fetchMealsByType = (mealType) => {
   const authorData = {
     Philippines: [
-      {by: "Philippe Edralin"}
+      {by: "~ Philippe Edralin"}
     ],
     Singapore: [
-      {by: "Aliexandra Po"}
+      {by: "~ Aliexandra Po"}
     ],
     Vietnam: [
-      {by: "Audrey Datario"}
+      {by: "~ Audrey Datario"}
     ],
     Thailand: [
-      {by: "Sofia Co"}
+      {by: "~ Sofia Co"}
     ],
     Malaysia: [
-      {by: "Antonio Mendoza"}
+      {by: "~ Antonio Mendoza"}
+    ],
+  }
+
+  const titleData = {
+    Philippines: [
+      {text: "Philippe Edralin"}
+    ],
+    Singapore: [
+      {text: "Singapore on a Plate: Eating My Way Through The Lion City"}
+    ],
+    Vietnam: [
+      {text: "Exploring Vietnam through the Symphonies of Flavor, Texture, and Tradition"}
+    ],
+    Thailand: [
+      {text: "Thai Cuisine: the (T)hai-light of the Trip"}
+    ],
+    Malaysia: [
+      {text: "Malay ko, Malay mo, Malay nating lahat, Malaysia!! : Exploring the food of Malaysia in Quiapo"}
     ],
   }
 
   let authorDiv = document.getElementById("author");
+  let titleLine = document.getElementById("title-line");
   let author = authorData[mealType][0].by;
+  let title = titleData[mealType][0].text;
+  titleLine.innerText = title;
   authorDiv.innerText = author;
 
   let foodType = document.getElementById("foodType");
   foodType.innerText = mealType + " Food Items";
+
+  window.location.hash = mealType;
 
   displayIntro(mealType);
   displayMeals(mealType);
@@ -207,10 +230,12 @@ const displayMeals = (mealType) => {
 
     mealCard.innerHTML = `
         <figure>
-          <img class="h-48 w-96 object-cover"
-               style="clip-path: polygon(0% 0%, 100% 0, 100% 85%, 51% 100%, 0 85%);" 
-               src="${meal.image}" 
-               alt="Image of ${meal.name}" />
+          <a href="${meal.source}" >
+            <img class="h-48 w-96 object-cover cursor-pointer"
+                style="clip-path: polygon(0% 0%, 100% 0, 100% 85%, 51% 100%, 0 85%);" 
+                src="${meal.image}" 
+                alt="Image of ${meal.name}" />
+          </a>
         </figure>
         <div class="card-body">
           <h2 class="card-title block text-center -mt-3">${meal.name}</h2>
@@ -227,5 +252,14 @@ const displayMeals = (mealType) => {
     cardContainer.appendChild(mealCard);
   });
 };
-fetchMealsByType('Philippines');
+// fetchMealsByType('Philippines');
+
+window.addEventListener("load", () => {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+      fetchMealsByType(hash);
+  } else {
+    fetchMealsByType("Philippines");
+  }
+});
 

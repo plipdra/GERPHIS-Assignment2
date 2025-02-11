@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("dish-image").src = dish.image;
             document.getElementById("dish-image").alt = dish.name;
             document.getElementById("dish-title").textContent = dish.name;
+            document.getElementById("dish-author").textContent = dish.author;
             document.getElementById("dish-description").textContent = dish.description;
 
             const ingredientsList = document.getElementById("dish-ingredients");
@@ -59,3 +60,34 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading dish data:", error));
 });
+
+const backHome = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const dishId = urlParams.get("id");
+    fetch("dishes.json")
+    .then(response => response.json())
+    .then(dishes => {
+        const dish = dishes.find(d => d.id == dishId);
+
+        if (!dish) {
+            alert("Dish not found!");
+            window.location.href = "index.html";
+            return;
+        }
+
+        if (dish.author == "Philippe Edralin") {
+            console.log(dish.author);
+            window.location.href = 'index.html#Philippines';
+        } else if (dish.author == "Aliexandra Po") {
+            console.log(dish.author);
+            window.location.href = 'index.html#Singapore';
+        } else if (dish.author == "Audrey Datario") {
+            window.location.href = 'index.html#Vietnam';
+        } else if (dish.author == "Sofia Co") {
+            window.location.href = 'index.html#Thailand';
+        } else if (dish.author == "Antonio Mendoza") {
+            window.location.href = 'index.html#Malaysia';
+        }
+    })
+    .catch(error => console.error("Error loading dish data:", error));
+}
