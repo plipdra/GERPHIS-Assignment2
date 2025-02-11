@@ -19,7 +19,7 @@ const fetchMealsByType = (mealType) => {
 
   const titleData = {
     Philippines: [
-      {text: "Philippe Edralin"}
+      {text: "Spice, Rice, and Everything Nice: A Filipino Feast"}
     ],
     Singapore: [
       {text: "Singapore on a Plate: Eating My Way Through The Lion City"}
