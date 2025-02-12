@@ -56,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 sensoryList.appendChild(li);
             });
 
-            document.getElementById("dish-finale").textContent = dish.recommend;
+            const finalThoughts = document.createElement("a");
+            finalThoughts.innerHTML = `${dish.recommend}`;
+            document.getElementById("dish-finale").append(finalThoughts);
         })
         .catch(error => console.error("Error loading dish data:", error));
 });
